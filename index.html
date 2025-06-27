@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,7 +17,8 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
-    <div class="hero-header">
+    <!-- HERO -->
+    <section class="hero-header" id="about">
       <div class="wrapper">
         <header>
           <div class="logo">
@@ -31,10 +33,10 @@
             </div>
             <ul class="navlinks">
               <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Skills</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#portfolio">Projects</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
           </nav>
         </header>
@@ -60,35 +62,267 @@
               developer, contribute to real-world projects, and be part of a
               supportive, forward-thinking team.
             </p>
-
-            <!-- <div class="btn-group">
-              <a href="#" class="btn active">Download CV</a>
-              <a href="#" class="btn">Contact</a>
-            </div> -->
-
             <div class="social">
               <a href="#"><i class="fa-brands fa-facebook"></i></a>
               <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-              <a href="#"><i class="fa-brands fa-email"></i></a>
+              <a href="#"><i class="fa-solid fa-envelope"></i></a>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!---typed js for typing text effect-->
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills" id="skills">
+      <div class="skills__head">Technical Skills</div>
+      <div class="skills__text">
+        These are some of the tech skills I have on my tool belt, although one
+        of the most important skills I've gained during my training as a
+        developer is the ability to learn new languages and frameworks in a
+        short space of time using the most relevant and up-to-date documentation
+        available.
+      </div>
+      <div class="skills__grid">
+        <!-- repeat your .skills__item blocks here -->
+        <div class="skills__item">
+                <img src="./images/Spring.png" class="skills__item--logo"></img>
+                <p class="skills__item--name">Spring Boot</p>
+
+            </div>
+            <div class="skills__item">
+                <img src="./images/React.png" class="skills__item--logo"></img>
+                <p class="skills__item--name">React</p>
+
+            </div>
+            <div class="skills__item">
+                <img src="./images/JS.png" class="skills__item--logo"></img>
+                <p class="skills__item--name">JavaScript</p>
+
+            </div>
+            <div class="skills__item">
+                <img src="./images/JavaScript.png" class="skills__item--logo"></img>
+                <p class="skills__item--name">Java</p>
+
+            </div>
+            <div class="skills__item">
+                <img src="./images/BEM.png" class="skills__item--logo"></img>
+                <p class="skills__item--name">BEM</p>
+
+            </div>
+            <div class="skills__item">
+                <img src="./images/SCSS.png" class="skills__item--logo"></img>
+                <p class="skills__item--name">SCSS</p>
+
+            </div>
+            <div class="skills__item">
+                <img src="./images/HTML5.png" class="skills__item--logo"></img>
+                <p class="skills__item--name">HTML5</p>
+
+            </div>
+            <div class="skills__item">
+                <img src="./images/Git.png" class="skills__item--logo"></img>
+                <p class="skills__item--name">Git</p>
+
+            </div>
+            <div class="skills__item">
+                <img src="./images/CSS3.png" class="skills__item--logo"></img>
+                <p class="skills__item--name">CSS3</p>
+
+            </div>
+        <!-- …other items… -->
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <div class="portfolio__head">My Projects</div>
+    <section class="portfolio" id="portfolio">
+      <div class="portfolio__project portfolio__project--1">
+        <div class="portfolio__project__head">Calculator</div>
+        <div class="portfolio__project__image">
+          <img src="./images/calculator.png" alt="Calculator preview" />
+        </div>
+        <div class="portfolio__project__info">
+          <div class="portfolio__project__language">TypeScript</div>
+          <div class="portfolio__project__text">
+            A browser-based calculator app using modern JavaScript programming
+            techniques and DOM manipulation.
+          </div>
+          <div class="portfolio__project__links">
+            <a
+              class="portfolio__project__links--code"
+              href="https://github.com/PabloJulianRial/calculator-waiheke"
+              >Code</a
+            >
+            <a
+              class="portfolio__project__links--preview"
+              href="https://pablojulianrial.github.io/calculator-waiheke/"
+              >Preview</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="portfolio__project portfolio__project--1">
+        <div class="portfolio__project__head">Calculator</div>
+        <div class="portfolio__project__image">
+          <img src="./images/calculator.png" alt="Calculator preview" />
+        </div>
+        <div class="portfolio__project__info">
+          <div class="portfolio__project__language">TypeScript</div>
+          <div class="portfolio__project__text">
+            A browser-based calculator app using modern JavaScript programming
+            techniques and DOM manipulation.
+          </div>
+          <div class="portfolio__project__links">
+            <a
+              class="portfolio__project__links--code"
+              href="https://github.com/PabloJulianRial/calculator-waiheke"
+              >Code</a
+            >
+            <a
+              class="portfolio__project__links--preview"
+              href="https://pablojulianrial.github.io/calculator-waiheke/"
+              >Preview</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="portfolio__project portfolio__project--1">
+        <div class="portfolio__project__head">Calculator</div>
+        <div class="portfolio__project__image">
+          <img src="./images/calculator.png" alt="Calculator preview" />
+        </div>
+        <div class="portfolio__project__info">
+          <div class="portfolio__project__language">TypeScript</div>
+          <div class="portfolio__project__text">
+            A browser-based calculator app using modern JavaScript programming
+            techniques and DOM manipulation.
+          </div>
+          <div class="portfolio__project__links">
+            <a
+              class="portfolio__project__links--code"
+              href="https://github.com/PabloJulianRial/calculator-waiheke"
+              >Code</a
+            >
+            <a
+              class="portfolio__project__links--preview"
+              href="https://pablojulianrial.github.io/calculator-waiheke/"
+              >Preview</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="portfolio__project portfolio__project--1">
+        <div class="portfolio__project__head">Calculator</div>
+        <div class="portfolio__project__image">
+          <img src="./images/calculator.png" alt="Calculator preview" />
+        </div>
+        <div class="portfolio__project__info">
+          <div class="portfolio__project__language">TypeScript</div>
+          <div class="portfolio__project__text">
+            A browser-based calculator app using modern JavaScript programming
+            techniques and DOM manipulation.
+          </div>
+          <div class="portfolio__project__links">
+            <a
+              class="portfolio__project__links--code"
+              href="https://github.com/PabloJulianRial/calculator-waiheke"
+              >Code</a
+            >
+            <a
+              class="portfolio__project__links--preview"
+              href="https://pablojulianrial.github.io/calculator-waiheke/"
+              >Preview</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="portfolio__project portfolio__project--1">
+        <div class="portfolio__project__head">Calculator</div>
+        <div class="portfolio__project__image">
+          <img src="./images/calculator.png" alt="Calculator preview" />
+        </div>
+        <div class="portfolio__project__info">
+          <div class="portfolio__project__language">TypeScript</div>
+          <div class="portfolio__project__text">
+            A browser-based calculator app using modern JavaScript programming
+            techniques and DOM manipulation.
+          </div>
+          <div class="portfolio__project__links">
+            <a
+              class="portfolio__project__links--code"
+              href="https://github.com/PabloJulianRial/calculator-waiheke"
+              >Code</a
+            >
+            <a
+              class="portfolio__project__links--preview"
+              href="https://pablojulianrial.github.io/calculator-waiheke/"
+              >Preview</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="portfolio__project portfolio__project--1">
+        <div class="portfolio__project__head">Calculator</div>
+        <div class="portfolio__project__image">
+          <img src="./images/calculator.png" alt="Calculator preview" />
+        </div>
+        <div class="portfolio__project__info">
+          <div class="portfolio__project__language">TypeScript</div>
+          <div class="portfolio__project__text">
+            A browser-based calculator app using modern JavaScript programming
+            techniques and DOM manipulation.
+          </div>
+          <div class="portfolio__project__links">
+            <a
+              class="portfolio__project__links--code"
+              href="https://github.com/PabloJulianRial/calculator-waiheke"
+              >Code</a
+            >
+            <a
+              class="portfolio__project__links--preview"
+              href="https://pablojulianrial.github.io/calculator-waiheke/"
+              >Preview</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- …repeat projects 2–6… -->
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <h3 class="contact__head">Contact me</h3>
+      <p>
+        If you have any questions at all, want a friendly chat, or have a job
+        proposition, please use any of the links below 👇
+      </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__links">
+        <a href="https://www.linkedin.com/in/pablo-rial-dev/" target="_blank"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/PabloJulianRial" target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="mailto:rialpabloj@hotmail.com" target="_blank"
+          ><i class="fa-solid fa-envelope"></i
+        ></a>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
     <script>
-      /** creating button click show hide navbar **/
-      var togglebtn = document.querySelector(".togglebtn");
-      var nav = document.querySelector(".navlinks");
-      var links = document.querySelector(".navlinks li");
-
-      togglebtn.addEventListener("click", function () {
-        this.classList.toggle("click");
+      const togglebtn = document.querySelector(".togglebtn");
+      const nav = document.querySelector(".navlinks");
+      togglebtn.addEventListener("click", () => {
+        togglebtn.classList.toggle("click");
         nav.classList.toggle("open");
       });
-
-      var typed = new Typed(".input", {
+      new Typed(".input", {
         strings: [
           "Frontend Developer",
           "Backend developer",
@@ -99,7 +333,7 @@
           "React Developer",
           "Node.js Developer",
         ],
-        typedSpeed: 70,
+        typeSpeed: 70,
         backSpeed: 55,
         loop: true,
       });
