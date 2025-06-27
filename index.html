@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="hero-header">
+      <div class="wrapper">
+        <header>
+          <div class="logo">
+            <i class="fa-solid fa-a"></i>
+            <div class="logo-text">Pablo Rial</div>
+          </div>
+          <nav>
+            <div class="togglebtn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <ul class="navlinks">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">Skills</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+        <div class="container">
+          <div class="hero-pic">
+            <img src="images/main-photo.png" alt="profile pic" />
+          </div>
+          <div class="hero-text">
+            <h5>Hi I'm <span class="input">Software Developer</span></h5>
+            <h1>Pablo Rial</h1>
+            <p>
+              I’m a career-changer turned junior software developer with a
+              background in leading high-pressure kitchens and a lifelong love
+              for technology. After years of running teams and delivering
+              results in fast-paced environments, I decided to follow my passion
+              for coding and build a new path in tech. I enjoy solving problems,
+              building useful things, and learning how technology can make
+              everyday life better. I’m especially drawn to collaborative
+              projects where creativity, communication, and continuous learning
+              all come together. Whether I’m debugging code or refining a
+              recipe, I bring the same focus, curiosity, and drive to improve
+              every day. Right now, I’m looking for opportunities to grow as a
+              developer, contribute to real-world projects, and be part of a
+              supportive, forward-thinking team.
+            </p>
+
+            <!-- <div class="btn-group">
+              <a href="#" class="btn active">Download CV</a>
+              <a href="#" class="btn">Contact</a>
+            </div> -->
+
+            <div class="social">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#"><i class="fa-brands fa-email"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---typed js for typing text effect-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+      /** creating button click show hide navbar **/
+      var togglebtn = document.querySelector(".togglebtn");
+      var nav = document.querySelector(".navlinks");
+      var links = document.querySelector(".navlinks li");
+
+      togglebtn.addEventListener("click", function () {
+        this.classList.toggle("click");
+        nav.classList.toggle("open");
+      });
+
+      var typed = new Typed(".input", {
+        strings: [
+          "Frontend Developer",
+          "Backend developer",
+          "Web Developer",
+          "Java Developer",
+          "Spring boot Developer",
+          "Typescript Developer",
+          "React Developer",
+          "Node.js Developer",
+        ],
+        typedSpeed: 70,
+        backSpeed: 55,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>
