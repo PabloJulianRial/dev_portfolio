@@ -1,20 +1,16 @@
-// style.scss
-// 1) Define your palette
-$primary: #260732;
+$primary: #6b158d;
 $primary2: #7c289d;
 $secondary: #007ced;
 $light-bg: #eaf5f5;
 $text-light: #e5e5e5;
 $text-dark: #000;
 
-// 2) Partials
 @import "./base";
 @import "./skills";
 @import "./portfolio";
 @import "./contact";
 @import "./footer";
 
-// 3) Hero + header + nav + global
 .hero-header {
   background: $primary;
   width: 100%;
@@ -195,43 +191,6 @@ nav {
 
     .hero-text {
       padding: 40px 0;
-    }
-  }
-}
-
-// CONTACT
-.contact {
-  background: $light-bg;
-  color: $text-dark;
-  width: 75vw;
-  margin: 2rem auto;
-  padding: 2rem;
-  text-align: center;
-
-  &__head {
-    font-size: 2rem;
-    color: $secondary;
-    margin-bottom: 1rem;
-  }
-}
-
-// FOOTER
-.footer {
-  background: $primary;
-  padding: 1rem 0;
-  text-align: center;
-
-  &__links {
-    a {
-      margin: 0 10px;
-      i {
-        font-size: 1.5rem;
-        color: $text-light;
-        transition: color 0.3s;
-        &:hover {
-          color: $secondary;
-        }
-      }
     }
   }
 }

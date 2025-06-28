@@ -3,8 +3,6 @@
   width: 75vw;
   margin: 2rem auto;
 
-  background: $primary;
-
   &__head {
     text-align: center;
     font-size: 2rem;
@@ -22,6 +20,7 @@
     justify-content: space-between;
     width: 100%;
     margin-bottom: 1.5rem;
+    box-shadow: 20px 20px 60px rgba(19, 18, 18, 0.1);
 
     &__head {
       text-align: center;
@@ -55,7 +54,7 @@
     &__text {
       flex-grow: 1;
       font-size: 0.9rem;
-      color: $text-dark;
+      color: $white;
       margin-bottom: 1rem;
     }
     &__links {

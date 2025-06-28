@@ -5,9 +5,9 @@
   margin: 2rem auto;
   padding: 2rem;
   text-align: center;
-}
-.contact__head {
-  font-size: 2rem;
-  color: #007ced;
-  margin-bottom: 1rem;
+  &__head {
+    font-size: 2rem;
+    color: #007ced;
+    margin-bottom: 1rem;
+  }
 }
