@@ -1,18 +1,23 @@
+//_footer.scss
+
 .footer {
-  background: $primary;
-  padding: 1rem 0;
+  background: $clr-text-dark;
+  padding: $space-l 0;
   text-align: center;
 
   &__links {
+    display: flex;
+    justify-content: center;
+    gap: $space-m;
+
     a {
-      margin: 0 10px;
-      i {
-        font-size: 1.5rem;
-        color: $text-light;
-        transition: color 0.3s;
-        &:hover {
-          color: $secondary;
-        }
+      font-size: 1.5rem;
+      color: $clr-bg-dark;
+      transition: $transition;
+
+      &:hover {
+        color: $clr-primary;
+        transform: translateY(-4px);
       }
     }
   }

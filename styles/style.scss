@@ -1,196 +1,190 @@
-$primary: #6b158d;
-$primary2: #7c289d;
-$secondary: #007ced;
-$light-bg: #eaf5f5;
-$text-light: #e5e5e5;
-$text-dark: #000;
+// style.scss
 
-@import "./base";
-@import "./skills";
-@import "./portfolio";
-@import "./contact";
-@import "./footer";
+// 1. CONFIG & HELPERS
+@import "variables";
 
-.hero-header {
-  background: $primary;
-  width: 100%;
-  min-height: 100vh;
+// 2. BASE STYLES
+@import "base";
+
+// 3. REUSABLE COMPONENTS
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: $border-radius;
+  font-weight: 600;
+  border: 2px solid transparent;
+  transition: $transition;
+  cursor: pointer;
+
+  &--primary {
+    background-color: $clr-primary;
+    color: $clr-bg-dark;
+    &:hover {
+      background-color: transparent;
+      color: $clr-primary;
+      border-color: $clr-primary;
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+    color: $clr-primary;
+    border-color: $clr-border;
+    &:hover {
+      background-color: $clr-primary;
+      color: $clr-bg-dark;
+      border-color: $clr-primary;
+    }
+  }
 }
 
-.wrapper {
-  width: 1280px;
-  max-width: 95%;
-  margin: 0 auto;
-  padding: 0 20px;
+// 4. SECTION & PAGE-SPECIFIC STYLES
+@import "skills";
+@import "portfolio";
+@import "contact";
+@import "footer";
+
+// 5. LAYOUT STYLES (Header, Nav, Hero etc.)
+.hero {
+  background: radial-gradient(circle at top left, #dde3ff, $clr-bg-light);
+  padding-bottom: $space-xl;
 }
 
-header {
-  padding: 40px 0 30px;
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-}
+  padding-block: $space-m;
 
-.logo {
-  display: inline-flex;
-  align-items: center;
-
-  i {
-    background: $secondary;
-    color: #fff;
+  &__logo {
     font-size: 1.5rem;
-    padding: 10px;
-    border-radius: 50%;
-    margin-right: 5px;
+    font-weight: 700;
+    color: $clr-text-dark;
   }
-  .logo-text {
-    color: #fff;
-    font-size: 24px;
-    font-weight: 500;
-  }
-}
 
-nav {
-  .togglebtn {
-    position: absolute;
-    top: 45px;
-    right: 3%;
-    width: 35px;
-    height: 35px;
+  &__toggle {
     display: none;
     cursor: pointer;
-
+    z-index: 100;
     span {
       display: block;
-      background: $secondary;
+      width: 25px;
       height: 3px;
+      background-color: $clr-text-dark;
       margin: 5px 0;
-      transition: transform 0.3s, opacity 0.3s;
+      transition: $transition;
     }
-    &.click {
-      span {
-        &:first-child {
-          transform: rotate(-40deg);
-        }
-        &:nth-child(2) {
-          opacity: 0;
-        }
-        &:last-child {
-          transform: rotate(45deg);
-          position: absolute;
-          top: 0;
-        }
-      }
+    &.open span:first-child {
+      transform: translateY(8px) rotate(45deg);
     }
-  }
-  .navlinks {
-    list-style: none;
-    li {
-      display: inline-block;
+    &.open span:nth-child(2) {
+      opacity: 0;
     }
-    li a {
-      color: $text-light;
-      margin-right: 2.5rem;
+    &.open span:last-child {
+      transform: translateY(-8px) rotate(-45deg);
     }
-    &.open {
-      right: 0;
-    }
-  }
 
-  @media (max-width: 930px) {
-    .togglebtn {
+    @media (max-width: 768px) {
       display: block;
     }
-    .navlinks {
-      position: absolute;
-      top: 110px;
-      right: -100%;
-      width: 60%;
-      height: 100vh;
-      background: #222;
-      padding: 25px 0;
-      transition: right 0.5s;
-      box-shadow: 5px 13px 30px rgba(0, 0, 0, 0.1);
+  }
 
-      li {
-        display: block;
-        text-align: center;
+  &__links {
+    display: flex;
+    gap: $space-m;
+    list-style: none;
+    a {
+      color: $clr-text-light;
+      font-weight: 500;
+      &:hover {
+        color: $clr-primary;
       }
-      li a {
-        display: block;
-        margin-bottom: 15px;
+    }
+
+    @media (max-width: 768px) {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background: $clr-bg-dark;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: $space-l;
+      transition: right 0.5s ease-in-out;
+      box-shadow: -10px 0px 30px -15px rgba(0, 0, 0, 0.2);
+
+      &.open {
+        right: 0;
       }
     }
   }
 }
 
-.container {
+.hero__container {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  padding-top: 4rem;
+  gap: $space-l;
+  padding-block: $space-xl;
 
-  .hero-pic {
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+
+.hero__text {
+  flex: 1;
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-block: $space-xs $space-s;
+  }
+  h5 {
+    color: $clr-text-light;
+    font-family: $font-secondary;
+    font-weight: 500;
+    font-size: 1.5rem;
+    height: 2.2rem; // Reserve vertical space to prevent layout shift from text changing length
+  }
+  .hero__input,
+  .typed-cursor {
+    color: $clr-primary;
+    font-weight: 500;
+  }
+  p {
+    max-width: 55ch;
+    margin-bottom: $space-m;
+    @media (max-width: 768px) {
+      margin-inline: auto;
+    }
+  }
+}
+
+.hero__socials {
+  display: flex;
+  gap: $space-m;
+  font-size: 1.5rem;
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+
+  a {
+    color: $clr-text-light;
+    &:hover {
+      color: $clr-primary;
+    }
+  }
+}
+
+.hero__pic {
+  flex-shrink: 0;
+  img {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    overflow: hidden;
-    border: 15px solid #444;
-    box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
-
-    img {
-      width: 100%;
-      height: 100%;
-      transition: transform 0.5s;
-      &:hover {
-        transform: scale(1.2);
-      }
-    }
-  }
-
-  .hero-text {
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-
-    h5 {
-      color: $text-light;
-      font-size: 14px;
-      span {
-        color: $secondary;
-        font-size: 16px;
-      }
-    }
-    h1 {
-      color: $secondary;
-      font-size: 3rem;
-    }
-    p {
-      color: $text-light;
-    }
-
-    .social {
-      margin-top: 1rem;
-      i {
-        color: $text-light;
-        font-size: 18px;
-        margin-right: 10px;
-        transition: color 0.5s, transform 0.5s;
-        &:hover {
-          color: $secondary;
-          transform: rotate(360deg);
-        }
-      }
-    }
-  }
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    padding-top: 2rem;
-
-    .hero-text {
-      padding: 40px 0;
-    }
+    object-fit: cover;
+    border: 8px solid $clr-bg-dark;
+    box-shadow: $shadow;
   }
 }
